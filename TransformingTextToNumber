@@ -1,0 +1,10 @@
+#list of sentences
+text = ["the dog is white", "the cat is black", "the cat and the dog are friends"]
+#instantiate the class
+cv = CountVectorizer()
+#tokenize and build vocab
+cv.fit(text)
+print(cv.vocabulary_)
+#transform the text
+vector = cv.transform(text)
+print(vector.toarray())
